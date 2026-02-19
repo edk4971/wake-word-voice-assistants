@@ -415,7 +415,7 @@ script:
           auto output_timer = *timers.begin();
           for (const auto &timer : timers) {
             if (timer.seconds_left <= output_timer.seconds_left) {
-              output_timer = iterable_timer.second;
+              output_timer = timer;
             }
           }
           id(global_first_timer) = output_timer;
